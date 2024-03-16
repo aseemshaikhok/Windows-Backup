@@ -1,4 +1,4 @@
-# Backup Script for Files to C Drive
+# Archive level Backup Script for Windows
 
 ## Description
 This PowerShell script automates the backup process for specified folders to the C drive. It compresses the folders into a ZIP file with today's date appended to the filename. The script also maintains a log of the backup process. Additionally, it checks for the number of backup ZIP files in the designated backup folder and deletes the oldest files if the count exceeds seven.
