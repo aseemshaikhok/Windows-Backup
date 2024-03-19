@@ -26,7 +26,7 @@ foreach ($folder in $folders) {
 }
 
 # List all ZIP files in the folder
-$zipFiles = Get-ChildItem -Path $backupFolder -Filter "*.zip" -File | Sort-Object CreationTime -Descending | Format-Table Name,CreationTime,Length
+$zipFiles = Get-ChildItem -Path $backupFolder -Filter "*.zip" -File | Sort-Object CreationTime 
 $zipFiles
 
 # Check if the number of ZIP files exceeds 7
@@ -41,7 +41,7 @@ if ($zipFiles.Count -gt 7) {
         Remove-Item -Path $file.FullName -Force -Verbose
     }
 } else {
-    Write-Host "Number of ZIP files is 7 or fewer." -Verbose
+    Write-Host "No ZIP files found or number of ZIP files is 7 or fewer." -Verbose
 }
 
 Stop-Transcript
